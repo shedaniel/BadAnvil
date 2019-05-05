@@ -1,0 +1,42 @@
+import net.fabricmc.loom.task.RemapJar
+
+plugins {
+    id 'fabric-loom' version '0.2.1-SNAPSHOT'
+    id "com.github.johnrengelman.shadow" version "4.0.3"
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+archivesBaseName = "BadAnvil"
+version = project.mod_version
+
+minecraft {
+}
+
+repositories {
+    maven { url "https://tehnut.info/maven/" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url "https://minecraft.curseforge.com/api/maven" }
+}
+
+processResources {
+    filesMatching('fabric.mod.json') {
+        expand 'version': project.version
+    }
+    inputs.property "version", project.version
+}
+
+jar {
+    version = project.mod_version.replaceAll('\\+build.', '.')
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_version}"
+    modCompile "net.fabricmc:fabric-loader:${project.fabricloader_version}"
+    modCompile "net.fabricmc:fabric:${project.fabric_version}"
+
+    modCompile "io.github.prospector.modmenu:ModMenu:${modmenu_version}"
+    compile "org.lwjgl:lwjgl-jemalloc:3.2.1"
+}

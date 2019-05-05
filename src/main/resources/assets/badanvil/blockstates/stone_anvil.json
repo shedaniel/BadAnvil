@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "badanvil:block/stone_anvil"
+    },
+    "facing=west": {
+      "model": "badanvil:block/stone_anvil",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "badanvil:block/stone_anvil",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "badanvil:block/stone_anvil",
+      "y": 270
+    }
+  }
+}

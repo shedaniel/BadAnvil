@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "badanvil",
+  "name": "Bad Anvil",
+  "version": "${version}",
+  "entrypoints": {
+    "main": [
+      "me.shedaniel.badanvil.BadAnvil"
+    ],
+    "client": [
+      "me.shedaniel.badanvil.BadAnvilClient"
+    ]
+  },
+  "mixins": [
+    "badanvil.mixins.json"
+  ],
+  "icon": "icon.png",
+  "description": "This mod adds stone anvils so this is bad"
+}

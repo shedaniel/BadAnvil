@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "me.shedaniel.badanvil.mixin",
+  "minVersion": "0.7.11",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AnvilContainerHooks"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
